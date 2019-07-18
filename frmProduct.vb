@@ -138,7 +138,7 @@ Public Class frmProduct
 
             cn.Open()
 
-            cm = New MySqlCommand("insert into tblproduct(barcode, Bid, gid, cid, tid, fid, reorder, qty, price) Then ThenVALUES(@barcode,@bid,@gid,@cid,@tid,@fid,@reorder,@qty,@price)", cn)
+            cm = New MySqlCommand("insert into tblproduct(barcode, Bid, gid, cid, tid, fid, reorder, qty, price)VALUES(@barcode,@bid,@gid,@cid,@tid,@fid,@reorder,@qty,@price)", cn)
             'cm = New MySqlCommand("insert into tblproduct(barcode,bid,gid,cid,tid,fid,reorder,qty,price)VALUES('" & txtBarcode.Text & "',
             '    '" & CInt(lblBrand.Text) & "','" & CInt(lblGeneric.Text) & "','" & CInt(lblClassification.Text) & "', '" & CInt(lblType.Text) & "','" & CInt(lblFormulation.Text) & "',
             '    '" & CInt(txtReorder.Text) & "','" & CInt(txtQty.Text) & "', '" & CDbl(txtPrice.Text) & "'", cn)

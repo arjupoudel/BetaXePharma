@@ -26,10 +26,11 @@ Partial Class frmStockIn
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.txtRecieved = New MetroFramework.Controls.MetroTextBox()
-        Me.MetroTextBox2 = New MetroFramework.Controls.MetroTextBox()
+        Me.txtstock = New MetroFramework.Controls.MetroTextBox()
         Me.txtRefNo = New MetroFramework.Controls.MetroTextBox()
-        Me.MetroDateTime1 = New MetroFramework.Controls.MetroDateTime()
+        Me.dtDate = New MetroFramework.Controls.MetroDateTime()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -52,7 +53,6 @@ Partial Class frmStockIn
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnSave = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -70,7 +70,7 @@ Partial Class frmStockIn
         Me.TabControl1.Location = New System.Drawing.Point(0, 71)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(966, 337)
+        Me.TabControl1.Size = New System.Drawing.Size(1028, 602)
         Me.TabControl1.TabIndex = 3
         '
         'TabPage1
@@ -80,7 +80,7 @@ Partial Class frmStockIn
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(958, 309)
+        Me.TabPage1.Size = New System.Drawing.Size(1020, 574)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Stock In Entry"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -89,17 +89,29 @@ Partial Class frmStockIn
         '
         Me.Panel3.Controls.Add(Me.btnSave)
         Me.Panel3.Controls.Add(Me.txtRecieved)
-        Me.Panel3.Controls.Add(Me.MetroTextBox2)
+        Me.Panel3.Controls.Add(Me.txtstock)
         Me.Panel3.Controls.Add(Me.txtRefNo)
-        Me.Panel3.Controls.Add(Me.MetroDateTime1)
+        Me.Panel3.Controls.Add(Me.dtDate)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.DataGridView1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(303, 3)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(652, 303)
+        Me.Panel3.Size = New System.Drawing.Size(714, 568)
         Me.Panel3.TabIndex = 1
+        '
+        'btnSave
+        '
+        Me.btnSave.BackColor = System.Drawing.Color.DarkGray
+        Me.btnSave.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSave.ForeColor = System.Drawing.Color.Black
+        Me.btnSave.Location = New System.Drawing.Point(567, 510)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(80, 32)
+        Me.btnSave.TabIndex = 22
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = False
         '
         'txtRecieved
         '
@@ -133,38 +145,38 @@ Partial Class frmStockIn
         Me.txtRecieved.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtRecieved.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'MetroTextBox2
+        'txtstock
         '
         '
         '
         '
-        Me.MetroTextBox2.CustomButton.Image = Nothing
-        Me.MetroTextBox2.CustomButton.Location = New System.Drawing.Point(194, 1)
-        Me.MetroTextBox2.CustomButton.Name = ""
-        Me.MetroTextBox2.CustomButton.Size = New System.Drawing.Size(25, 25)
-        Me.MetroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox2.CustomButton.TabIndex = 1
-        Me.MetroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox2.CustomButton.UseSelectable = True
-        Me.MetroTextBox2.CustomButton.Visible = False
-        Me.MetroTextBox2.Lines = New String(-1) {}
-        Me.MetroTextBox2.Location = New System.Drawing.Point(479, 36)
-        Me.MetroTextBox2.MaxLength = 32767
-        Me.MetroTextBox2.Name = "MetroTextBox2"
-        Me.MetroTextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox2.PromptText = "0"
-        Me.MetroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox2.SelectedText = ""
-        Me.MetroTextBox2.SelectionLength = 0
-        Me.MetroTextBox2.SelectionStart = 0
-        Me.MetroTextBox2.ShortcutsEnabled = True
-        Me.MetroTextBox2.Size = New System.Drawing.Size(220, 27)
-        Me.MetroTextBox2.TabIndex = 20
-        Me.MetroTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MetroTextBox2.UseSelectable = True
-        Me.MetroTextBox2.WaterMark = "0"
-        Me.MetroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox2.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtstock.CustomButton.Image = Nothing
+        Me.txtstock.CustomButton.Location = New System.Drawing.Point(194, 1)
+        Me.txtstock.CustomButton.Name = ""
+        Me.txtstock.CustomButton.Size = New System.Drawing.Size(25, 25)
+        Me.txtstock.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtstock.CustomButton.TabIndex = 1
+        Me.txtstock.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtstock.CustomButton.UseSelectable = True
+        Me.txtstock.CustomButton.Visible = False
+        Me.txtstock.Lines = New String(-1) {}
+        Me.txtstock.Location = New System.Drawing.Point(427, 40)
+        Me.txtstock.MaxLength = 32767
+        Me.txtstock.Name = "txtstock"
+        Me.txtstock.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtstock.PromptText = "0"
+        Me.txtstock.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtstock.SelectedText = ""
+        Me.txtstock.SelectionLength = 0
+        Me.txtstock.SelectionStart = 0
+        Me.txtstock.ShortcutsEnabled = True
+        Me.txtstock.Size = New System.Drawing.Size(220, 27)
+        Me.txtstock.TabIndex = 20
+        Me.txtstock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtstock.UseSelectable = True
+        Me.txtstock.WaterMark = "0"
+        Me.txtstock.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtstock.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'txtRefNo
         '
@@ -198,18 +210,18 @@ Partial Class frmStockIn
         Me.txtRefNo.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtRefNo.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'MetroDateTime1
+        'dtDate
         '
-        Me.MetroDateTime1.Location = New System.Drawing.Point(479, 3)
-        Me.MetroDateTime1.MinimumSize = New System.Drawing.Size(0, 29)
-        Me.MetroDateTime1.Name = "MetroDateTime1"
-        Me.MetroDateTime1.Size = New System.Drawing.Size(220, 29)
-        Me.MetroDateTime1.TabIndex = 18
+        Me.dtDate.Location = New System.Drawing.Point(427, 5)
+        Me.dtDate.MinimumSize = New System.Drawing.Size(0, 29)
+        Me.dtDate.Name = "dtDate"
+        Me.dtDate.Size = New System.Drawing.Size(220, 29)
+        Me.dtDate.TabIndex = 18
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(352, 48)
+        Me.Label3.Location = New System.Drawing.Point(297, 52)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(121, 15)
         Me.Label3.TabIndex = 14
@@ -218,7 +230,7 @@ Partial Class frmStockIn
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(386, 11)
+        Me.Label2.Location = New System.Drawing.Point(315, 10)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(87, 15)
         Me.Label2.TabIndex = 12
@@ -229,16 +241,15 @@ Partial Class frmStockIn
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToResizeColumns = False
         Me.DataGridView1.AllowUserToResizeRows = False
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column6, Me.Column8, Me.Column10, Me.Column7, Me.Column9, Me.Column4})
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 74)
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 73)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 50
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(713, 377)
+        Me.DataGridView1.Size = New System.Drawing.Size(713, 431)
         Me.DataGridView1.TabIndex = 10
         '
         'Column1
@@ -310,7 +321,7 @@ Partial Class frmStockIn
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(3, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(300, 303)
+        Me.Panel2.Size = New System.Drawing.Size(300, 568)
         Me.Panel2.TabIndex = 0
         '
         'cboFilter
@@ -361,15 +372,14 @@ Partial Class frmStockIn
         Me.DataGridView2.AllowUserToAddRows = False
         Me.DataGridView2.AllowUserToResizeColumns = False
         Me.DataGridView2.AllowUserToResizeRows = False
-        Me.DataGridView2.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn4, Me.colselect})
-        Me.DataGridView2.Location = New System.Drawing.Point(-3, 74)
+        Me.DataGridView2.Location = New System.Drawing.Point(-3, 73)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowHeadersVisible = False
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView2.Size = New System.Drawing.Size(297, 377)
+        Me.DataGridView2.Size = New System.Drawing.Size(297, 431)
         Me.DataGridView2.TabIndex = 10
         '
         'DataGridViewTextBoxColumn1
@@ -410,7 +420,7 @@ Partial Class frmStockIn
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(887, 383)
+        Me.TabPage2.Size = New System.Drawing.Size(1020, 574)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Stock In History"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -433,26 +443,14 @@ Partial Class frmStockIn
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(966, 71)
+        Me.Panel1.Size = New System.Drawing.Size(1028, 71)
         Me.Panel1.TabIndex = 2
-        '
-        'btnSave
-        '
-        Me.btnSave.BackColor = System.Drawing.Color.DarkGray
-        Me.btnSave.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSave.ForeColor = System.Drawing.Color.Black
-        Me.btnSave.Location = New System.Drawing.Point(508, 466)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(80, 32)
-        Me.btnSave.TabIndex = 22
-        Me.btnSave.Text = "Save"
-        Me.btnSave.UseVisualStyleBackColor = False
         '
         'frmStockIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(966, 408)
+        Me.ClientSize = New System.Drawing.Size(1028, 673)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -483,9 +481,9 @@ Partial Class frmStockIn
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents txtRecieved As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents MetroTextBox2 As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtstock As MetroFramework.Controls.MetroTextBox
     Friend WithEvents txtRefNo As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents MetroDateTime1 As MetroFramework.Controls.MetroDateTime
+    Friend WithEvents dtDate As MetroFramework.Controls.MetroDateTime
     Friend WithEvents cboFilter As ComboBox
     Friend WithEvents txtSearch As MetroFramework.Controls.MetroTextBox
     Friend WithEvents DataGridView1 As DataGridView

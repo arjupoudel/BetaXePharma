@@ -55,4 +55,73 @@ Public Class frmStockIn
 
         End Try
     End Sub
+
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        Try
+            For i As Integer = 0 To DataGridView1.Rows.Count - 1
+                If DataGridView1.Rows(i).Cells(7).Value = String.Empty Then
+                    MsgBox("Please input quantity.", vbExclamation)
+                    Return
+                End If
+            Next
+            Dim sdate As String = dtDate.Value.ToString("yyyy-MM-dd")
+            For i As Integer = 0 To DataGridView1.Rows.Count - 1
+
+                'this code avoid duplicate entry'
+                Dim found As Boolean = False
+                cn.Open()
+                cm = New MySqlCommand("select * from tblstockin where refno like '" & txtRefNo.Text & "' and pid Like '" & DataGridView1.Rows(i).Cells(1).Value.ToString & "' and sdate like '" & sdate & "'", cn)
+                'And pid Like '" & DataGridView1.Rows(i).Cells(1).Value.ToString & "'and sdate like '" & sdate & "'
+                dr = cm.ExecuteReader
+                dr.Read()
+                If dr.HasRows Then found = True Else found = False
+                dr.Close()
+                cn.Close()
+
+                If found = False Then
+                    cn.Open()
+                    cm = Nothing
+                    cm = New MySqlCommand("insert into tblstockin(refno, recievedby, pid, qty, sdate)VALUES(@refno,@recievedby,@pid,@qty,@sdate)", cn)
+                    With cm
+                        .Parameters.AddWithValue("@refno", txtRefNo.Text)
+                        .Parameters.AddWithValue("@recievedby", txtRecieved.Text)
+                        .Parameters.AddWithValue("@pid", CInt(DataGridView1.Rows(i).Cells(1).Value.ToString))
+                        .Parameters.AddWithValue("@qty", CInt(DataGridView1.Rows(i).Cells(7).Value.ToString))
+                        .Parameters.AddWithValue("@sdate", sdate)
+
+                        .ExecuteNonQuery()
+                    End With
+                    cn.Close()
+                    cn.Open()
+                    cm = Nothing
+                    cm = New MySqlCommand("update tblproduct Set qty= qty + " & CInt(DataGridView1.Rows(i).Cells(7).Value.ToString) & " where id Like '" & DataGridView1.Rows(i).Cells(1).Value.ToString & "'", cn)
+                    cm.ExecuteNonQuery()
+                    cn.Close()
+                    MsgBox("Stocks sucessfully saved.", vbInformation)
+                    Me.Close()
+                Else MsgBox("Sorry duplicate entry for stock  ,change your reference number and date ", vbExclamation)
+                End If
+            Next
+
+
+        Catch ex As Exception
+            Me.Close()
+            cn.Close()
+            MsgBox(ex.Message, vbCritical)
+        End Try
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub DataGridView1_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
+        On Error Resume Next
+        Dim stock As Double = 0
+        For i As Integer = 0 To DataGridView1.Rows.Count - 1
+            If DataGridView1.Rows(i).Cells(7).Value.ToString <> String.Empty Then stock += CDbl(DataGridView1.Rows(i).Cells(7).Value.ToString)
+
+        Next
+        txtstock.Text = stock
+    End Sub
 End Class
