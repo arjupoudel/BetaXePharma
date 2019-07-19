@@ -1,4 +1,6 @@
 ﻿Public Class frmMain
+
+
     Private Sub btnCategory_Click(sender As Object, e As EventArgs) Handles btnMaintenance.Click
         With frmMaintenance
             .TopLevel = False
@@ -32,13 +34,23 @@
         End With
     End Sub
 
-    Private Sub btnSales_Click(sender As Object, e As EventArgs) Handles btnSales.Click
+    Private Sub btnStock_Click(sender As Object, e As EventArgs) Handles btnStock.Click
         With frmStockIn
             .LoadProduct()
             .TopLevel = False
             Panel3.Controls.Add(frmStockIn)
             .BringToFront()
             .Show()
+
+        End With
+    End Sub
+
+    Private Sub btnSales_Click(sender As Object, e As EventArgs) Handles btnSales.Click
+        With frmSales
+            ''.TopLevel = False
+            ''Panel3.Controls.Add(frmSales)
+            ''.BringToFront()
+            .ShowDialog()
 
         End With
     End Sub

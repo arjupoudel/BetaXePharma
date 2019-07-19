@@ -24,10 +24,11 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.btnStock = New System.Windows.Forms.Button()
         Me.btnMaintenance = New System.Windows.Forms.Button()
         Me.btnProduct = New System.Windows.Forms.Button()
         Me.btnSales = New System.Windows.Forms.Button()
@@ -43,10 +44,11 @@ Partial Class frmMain
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Button7)
         Me.Panel1.Controls.Add(Me.Button6)
-        Me.Panel1.Controls.Add(Me.Button5)
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Button4)
+        Me.Panel1.Controls.Add(Me.Button7)
+        Me.Panel1.Controls.Add(Me.btnStock)
         Me.Panel1.Controls.Add(Me.btnMaintenance)
         Me.Panel1.Controls.Add(Me.btnProduct)
         Me.Panel1.Controls.Add(Me.btnSales)
@@ -56,6 +58,45 @@ Partial Class frmMain
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(275, 650)
         Me.Panel1.TabIndex = 0
+        '
+        'Button6
+        '
+        Me.Button6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.ForeColor = System.Drawing.Color.White
+        Me.Button6.Location = New System.Drawing.Point(0, 512)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(275, 39)
+        Me.Button6.TabIndex = 10
+        Me.Button6.Text = "System Lock"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(0, 472)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(275, 40)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "User Account"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Location = New System.Drawing.Point(0, 432)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(275, 40)
+        Me.Button4.TabIndex = 8
+        Me.Button4.Text = "Sales Reports"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Button7
         '
@@ -70,44 +111,18 @@ Partial Class frmMain
         Me.Button7.Text = "Logout"
         Me.Button7.UseVisualStyleBackColor = True
         '
-        'Button6
+        'btnStock
         '
-        Me.Button6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.ForeColor = System.Drawing.Color.White
-        Me.Button6.Location = New System.Drawing.Point(0, 505)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(275, 46)
-        Me.Button6.TabIndex = 6
-        Me.Button6.Text = "System Lock"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(0, 459)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(275, 46)
-        Me.Button5.TabIndex = 5
-        Me.Button5.Text = "User Account"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(0, 413)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(275, 46)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "Sales Reports"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnStock.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnStock.FlatAppearance.BorderSize = 0
+        Me.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnStock.ForeColor = System.Drawing.Color.White
+        Me.btnStock.Location = New System.Drawing.Point(0, 392)
+        Me.btnStock.Name = "btnStock"
+        Me.btnStock.Size = New System.Drawing.Size(275, 40)
+        Me.btnStock.TabIndex = 5
+        Me.btnStock.Text = "Stocks"
+        Me.btnStock.UseVisualStyleBackColor = True
         '
         'btnMaintenance
         '
@@ -115,9 +130,9 @@ Partial Class frmMain
         Me.btnMaintenance.FlatAppearance.BorderSize = 0
         Me.btnMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMaintenance.ForeColor = System.Drawing.Color.White
-        Me.btnMaintenance.Location = New System.Drawing.Point(0, 367)
+        Me.btnMaintenance.Location = New System.Drawing.Point(0, 354)
         Me.btnMaintenance.Name = "btnMaintenance"
-        Me.btnMaintenance.Size = New System.Drawing.Size(275, 46)
+        Me.btnMaintenance.Size = New System.Drawing.Size(275, 38)
         Me.btnMaintenance.TabIndex = 3
         Me.btnMaintenance.Text = "Maintenance"
         Me.btnMaintenance.UseVisualStyleBackColor = True
@@ -128,9 +143,9 @@ Partial Class frmMain
         Me.btnProduct.FlatAppearance.BorderSize = 0
         Me.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnProduct.ForeColor = System.Drawing.Color.White
-        Me.btnProduct.Location = New System.Drawing.Point(0, 321)
+        Me.btnProduct.Location = New System.Drawing.Point(0, 314)
         Me.btnProduct.Name = "btnProduct"
-        Me.btnProduct.Size = New System.Drawing.Size(275, 46)
+        Me.btnProduct.Size = New System.Drawing.Size(275, 40)
         Me.btnProduct.TabIndex = 2
         Me.btnProduct.Text = "Product"
         Me.btnProduct.UseVisualStyleBackColor = True
@@ -143,9 +158,9 @@ Partial Class frmMain
         Me.btnSales.ForeColor = System.Drawing.Color.White
         Me.btnSales.Location = New System.Drawing.Point(0, 275)
         Me.btnSales.Name = "btnSales"
-        Me.btnSales.Size = New System.Drawing.Size(275, 46)
+        Me.btnSales.Size = New System.Drawing.Size(275, 39)
         Me.btnSales.TabIndex = 1
-        Me.btnSales.Text = "Stocks"
+        Me.btnSales.Text = "Sales"
         Me.btnSales.UseVisualStyleBackColor = True
         '
         'Panel2
@@ -196,11 +211,10 @@ Partial Class frmMain
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "XEPHARMA"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -213,12 +227,13 @@ Partial Class frmMain
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Button7 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnStock As Button
     Friend WithEvents btnMaintenance As Button
     Friend WithEvents btnProduct As Button
     Friend WithEvents btnSales As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button4 As Button
 End Class

@@ -55,14 +55,6 @@ Partial Class frmStockIn
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.btngo = New System.Windows.Forms.Button()
-        Me.dtDate2 = New MetroFramework.Controls.MetroDateTime()
-        Me.dtDate1 = New MetroFramework.Controls.MetroDateTime()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.MetroDateTime1 = New MetroFramework.Controls.MetroDateTime()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -74,6 +66,14 @@ Partial Class frmStockIn
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btngo = New System.Windows.Forms.Button()
+        Me.dtDate2 = New MetroFramework.Controls.MetroDateTime()
+        Me.dtDate1 = New MetroFramework.Controls.MetroDateTime()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.MetroDateTime1 = New MetroFramework.Controls.MetroDateTime()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -92,10 +92,10 @@ Partial Class frmStockIn
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 71)
+        Me.TabControl1.Location = New System.Drawing.Point(0, 92)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1028, 602)
+        Me.TabControl1.Size = New System.Drawing.Size(1028, 581)
         Me.TabControl1.TabIndex = 3
         '
         'TabPage1
@@ -105,7 +105,7 @@ Partial Class frmStockIn
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1020, 574)
+        Me.TabPage1.Size = New System.Drawing.Size(1020, 553)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Stock In Entry"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -124,7 +124,7 @@ Partial Class frmStockIn
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(303, 3)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(714, 568)
+        Me.Panel3.Size = New System.Drawing.Size(714, 547)
         Me.Panel3.TabIndex = 1
         '
         'btnCancel
@@ -132,7 +132,7 @@ Partial Class frmStockIn
         Me.btnCancel.BackColor = System.Drawing.Color.DarkGray
         Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
-        Me.btnCancel.Location = New System.Drawing.Point(604, 510)
+        Me.btnCancel.Location = New System.Drawing.Point(595, 510)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(80, 32)
         Me.btnCancel.TabIndex = 23
@@ -360,12 +360,13 @@ Partial Class frmStockIn
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(3, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(300, 568)
+        Me.Panel2.Size = New System.Drawing.Size(300, 547)
         Me.Panel2.TabIndex = 0
         '
         'cboFilter
         '
         Me.cboFilter.AutoCompleteCustomSource.AddRange(New String() {"Barcode", "Brand", "Generic"})
+        Me.cboFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboFilter.FormattingEnabled = True
         Me.cboFilter.Items.AddRange(New Object() {"Barcode", "Brand", "Generic"})
         Me.cboFilter.Location = New System.Drawing.Point(3, 7)
@@ -506,6 +507,86 @@ Partial Class frmStockIn
         Me.DataGridView3.Size = New System.Drawing.Size(1003, 526)
         Me.DataGridView3.TabIndex = 11
         '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.FillWeight = 50.0!
+        Me.DataGridViewTextBoxColumn3.HeaderText = "#"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Width = 44
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn5.FillWeight = 50.0!
+        Me.DataGridViewTextBoxColumn5.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.Visible = False
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "RefNo"
+        Me.Column3.Name = "Column3"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Recieved By"
+        Me.Column5.Name = "Column5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn6.HeaderText = "BRAND NAME"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 103
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn7.HeaderText = "CLASSIFICATION"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Width = 126
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn8.HeaderText = "FORMULATION"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Width = 119
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn9.HeaderText = "GENERIC NAME"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Width = 114
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn10.HeaderText = "TYPE"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        Me.DataGridViewTextBoxColumn10.Width = 62
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.FillWeight = 30.0!
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Qty"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.Width = 30
+        '
+        'Column11
+        '
+        Me.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column11.HeaderText = "Date"
+        Me.Column11.Name = "Column11"
+        Me.Column11.Width = 58
+        '
         'btngo
         '
         Me.btngo.BackColor = System.Drawing.Color.DarkGray
@@ -577,94 +658,13 @@ Partial Class frmStockIn
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1028, 71)
+        Me.Panel1.Size = New System.Drawing.Size(1028, 92)
         Me.Panel1.TabIndex = 2
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.FillWeight = 50.0!
-        Me.DataGridViewTextBoxColumn3.HeaderText = "#"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Width = 44
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn5.FillWeight = 50.0!
-        Me.DataGridViewTextBoxColumn5.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.Visible = False
-        Me.DataGridViewTextBoxColumn5.Width = 44
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "RefNo"
-        Me.Column3.Name = "Column3"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Recieved By"
-        Me.Column5.Name = "Column5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn6.HeaderText = "BRAND NAME"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Width = 112
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn7.HeaderText = "CLASSIFICATION"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Width = 126
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn8.HeaderText = "FORMULATION"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Width = 119
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn9.HeaderText = "GENERIC NAME"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        Me.DataGridViewTextBoxColumn9.Width = 114
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DataGridViewTextBoxColumn10.HeaderText = "TYPE"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        Me.DataGridViewTextBoxColumn10.Width = 62
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.FillWeight = 30.0!
-        Me.DataGridViewTextBoxColumn11.HeaderText = "Qty"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.Width = 30
-        '
-        'Column11
-        '
-        Me.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.Column11.HeaderText = "Date"
-        Me.Column11.Name = "Column11"
-        Me.Column11.Width = 58
         '
         'frmStockIn
         '

@@ -45,12 +45,13 @@ Partial Class frmProductList
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.btnNew)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(966, 98)
+        Me.Panel1.Size = New System.Drawing.Size(966, 92)
         Me.Panel1.TabIndex = 5
         '
         'Label1
@@ -86,11 +87,11 @@ Partial Class frmProductList
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column8, Me.Column10, Me.Column7, Me.Column9, Me.Column11, Me.Column12, Me.Column13, Me.colEdit, Me.colDel})
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 98)
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 92)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(966, 310)
+        Me.DataGridView1.Size = New System.Drawing.Size(966, 316)
         Me.DataGridView1.TabIndex = 9
         '
         'Column1

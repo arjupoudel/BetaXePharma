@@ -23,7 +23,6 @@ Partial Class frmClassificationlist
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnNew = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -35,6 +34,7 @@ Partial Class frmClassificationlist
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,17 +49,6 @@ Partial Class frmClassificationlist
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(921, 98)
         Me.Panel1.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(6, 21)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(131, 20)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Classification List"
         '
         'btnNew
         '
@@ -140,7 +129,6 @@ Partial Class frmClassificationlist
         Me.Column2.HeaderText = "ID"
         Me.Column2.Name = "Column2"
         Me.Column2.Visible = False
-        Me.Column2.Width = 46
         '
         'Column3
         '
@@ -161,6 +149,17 @@ Partial Class frmClassificationlist
         Me.Column5.HeaderText = ""
         Me.Column5.Name = "Column5"
         Me.Column5.Width = 5
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(6, 21)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(131, 20)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Classification List"
         '
         'frmClassificationlist
         '
@@ -193,11 +192,11 @@ Partial Class frmClassificationlist
     Friend WithEvents Panel4 As Panel
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnNew As Button
-    Friend WithEvents Label1 As Label
     Public WithEvents lblCount As Label
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewButtonColumn
     Friend WithEvents Column5 As DataGridViewButtonColumn
+    Friend WithEvents Label1 As Label
 End Class
