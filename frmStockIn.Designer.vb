@@ -26,6 +26,7 @@ Partial Class frmStockIn
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.txtRecieved = New MetroFramework.Controls.MetroTextBox()
         Me.txtstock = New MetroFramework.Controls.MetroTextBox()
@@ -51,6 +52,26 @@ Partial Class frmStockIn
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colselect = New System.Windows.Forms.DataGridViewImageColumn()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btngo = New System.Windows.Forms.Button()
+        Me.sdate2 = New MetroFramework.Controls.MetroDateTime()
+        Me.sdate1 = New MetroFramework.Controls.MetroDateTime()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.MetroDateTime1 = New MetroFramework.Controls.MetroDateTime()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
@@ -59,6 +80,10 @@ Partial Class frmStockIn
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -87,6 +112,7 @@ Partial Class frmStockIn
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.btnCancel)
         Me.Panel3.Controls.Add(Me.btnSave)
         Me.Panel3.Controls.Add(Me.txtRecieved)
         Me.Panel3.Controls.Add(Me.txtstock)
@@ -101,12 +127,24 @@ Partial Class frmStockIn
         Me.Panel3.Size = New System.Drawing.Size(714, 568)
         Me.Panel3.TabIndex = 1
         '
+        'btnCancel
+        '
+        Me.btnCancel.BackColor = System.Drawing.Color.DarkGray
+        Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCancel.ForeColor = System.Drawing.Color.Black
+        Me.btnCancel.Location = New System.Drawing.Point(604, 510)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(80, 32)
+        Me.btnCancel.TabIndex = 23
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = False
+        '
         'btnSave
         '
         Me.btnSave.BackColor = System.Drawing.Color.DarkGray
         Me.btnSave.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSave.ForeColor = System.Drawing.Color.Black
-        Me.btnSave.Location = New System.Drawing.Point(567, 510)
+        Me.btnSave.Location = New System.Drawing.Point(509, 510)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(80, 32)
         Me.btnSave.TabIndex = 22
@@ -244,6 +282,7 @@ Partial Class frmStockIn
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column6, Me.Column8, Me.Column10, Me.Column7, Me.Column9, Me.Column4})
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder
         Me.DataGridView1.Location = New System.Drawing.Point(0, 73)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
@@ -417,6 +456,7 @@ Partial Class frmStockIn
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Panel4)
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -424,6 +464,183 @@ Partial Class frmStockIn
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Stock In History"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.Panel5)
+        Me.Panel4.Controls.Add(Me.MetroDateTime1)
+        Me.Panel4.Controls.Add(Me.Label4)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel4.Location = New System.Drawing.Point(3, 3)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(1014, 568)
+        Me.Panel4.TabIndex = 0
+        '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.DataGridView3)
+        Me.Panel5.Controls.Add(Me.btngo)
+        Me.Panel5.Controls.Add(Me.sdate2)
+        Me.Panel5.Controls.Add(Me.sdate1)
+        Me.Panel5.Controls.Add(Me.Label5)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel5.Location = New System.Drawing.Point(0, 0)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1014, 568)
+        Me.Panel5.TabIndex = 2
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AllowUserToAddRows = False
+        Me.DataGridView3.AllowUserToResizeColumns = False
+        Me.DataGridView3.AllowUserToResizeRows = False
+        Me.DataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn5, Me.Column3, Me.Column5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.Column11})
+        Me.DataGridView3.GridColor = System.Drawing.SystemColors.ActiveBorder
+        Me.DataGridView3.Location = New System.Drawing.Point(6, 37)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.RowHeadersVisible = False
+        Me.DataGridView3.RowHeadersWidth = 50
+        Me.DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView3.Size = New System.Drawing.Size(1003, 526)
+        Me.DataGridView3.TabIndex = 11
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.FillWeight = 50.0!
+        Me.DataGridViewTextBoxColumn3.HeaderText = "#"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Width = 44
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn5.FillWeight = 50.0!
+        Me.DataGridViewTextBoxColumn5.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.Visible = False
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "RefNo"
+        Me.Column3.Name = "Column3"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Recieved By"
+        Me.Column5.Name = "Column5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn6.HeaderText = "BRAND NAME"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 103
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn7.HeaderText = "CLASSIFICATION"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Width = 126
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn8.HeaderText = "FORMULATION"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Width = 119
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn9.HeaderText = "GENERIC NAME"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Width = 114
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DataGridViewTextBoxColumn10.HeaderText = "TYPE"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        Me.DataGridViewTextBoxColumn10.Width = 62
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Qty"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        '
+        'Column11
+        '
+        Me.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column11.HeaderText = "Date"
+        Me.Column11.Name = "Column11"
+        Me.Column11.Width = 58
+        '
+        'btngo
+        '
+        Me.btngo.BackColor = System.Drawing.Color.DarkGray
+        Me.btngo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btngo.ForeColor = System.Drawing.Color.Black
+        Me.btngo.Location = New System.Drawing.Point(373, 5)
+        Me.btngo.Name = "btngo"
+        Me.btngo.Size = New System.Drawing.Size(80, 32)
+        Me.btngo.TabIndex = 7
+        Me.btngo.Text = "Go"
+        Me.btngo.UseVisualStyleBackColor = False
+        '
+        'sdate2
+        '
+        Me.sdate2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.sdate2.Location = New System.Drawing.Point(262, 8)
+        Me.sdate2.MinimumSize = New System.Drawing.Size(4, 29)
+        Me.sdate2.Name = "sdate2"
+        Me.sdate2.Size = New System.Drawing.Size(105, 29)
+        Me.sdate2.TabIndex = 2
+        '
+        'sdate1
+        '
+        Me.sdate1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.sdate1.Location = New System.Drawing.Point(138, 8)
+        Me.sdate1.MinimumSize = New System.Drawing.Size(4, 29)
+        Me.sdate1.Name = "sdate1"
+        Me.sdate1.Size = New System.Drawing.Size(105, 29)
+        Me.sdate1.TabIndex = 1
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(3, 13)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(132, 16)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "Date Filter (From-To)"
+        '
+        'MetroDateTime1
+        '
+        Me.MetroDateTime1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.MetroDateTime1.Location = New System.Drawing.Point(138, 2)
+        Me.MetroDateTime1.MinimumSize = New System.Drawing.Size(4, 29)
+        Me.MetroDateTime1.Name = "MetroDateTime1"
+        Me.MetroDateTime1.Size = New System.Drawing.Size(105, 29)
+        Me.MetroDateTime1.TabIndex = 1
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(15, 8)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(121, 15)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "Date Filter (From-To)"
         '
         'Label1
         '
@@ -465,6 +682,12 @@ Partial Class frmStockIn
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -500,4 +723,25 @@ Partial Class frmStockIn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents colselect As DataGridViewImageColumn
     Friend WithEvents btnSave As Button
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents sdate2 As MetroFramework.Controls.MetroDateTime
+    Friend WithEvents sdate1 As MetroFramework.Controls.MetroDateTime
+    Friend WithEvents Label5 As Label
+    Friend WithEvents MetroDateTime1 As MetroFramework.Controls.MetroDateTime
+    Friend WithEvents Label4 As Label
+    Friend WithEvents btngo As Button
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents Column11 As DataGridViewTextBoxColumn
 End Class

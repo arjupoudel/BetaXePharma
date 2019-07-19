@@ -8,7 +8,7 @@ Public Class frmStockIn
         DataGridView2.Rows.Clear()
 
         cn.Open()
-        cm = New MySqlCommand("select *from tblproduct as p  inner join tblbrand as b on p.bid=b.brandid inner join tblclassification as c on p.cid=c.classificationid 
+        cm = New MySqlCommand("select * from tblproduct as p  inner join tblbrand as b on p.bid=b.brandid inner join tblclassification as c on p.cid=c.classificationid 
     inner join tblformulation as f on p.fid = f.formulationid inner join tblgeneric as g on p.gid =g.genericid inner join tbltype as t on p.tid =t.typeid where " & cboFilter.Text & " like '" & txtSearch.Text & "%'", cn)
         dr = cm.ExecuteReader
         While dr.Read
@@ -124,4 +124,32 @@ Public Class frmStockIn
         Next
         txtstock.Text = stock
     End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        txtRecieved.Clear()
+        txtRefNo.Clear()
+        dtDate.Value = Now
+        DataGridView1.Rows.Clear()
+    End Sub
+
+    Sub LoadStockInHistory()
+        Dim i As Integer = 0
+        DataGridView1.Rows.Clear()
+
+        cn.Open()
+        cm = New MySqlCommand("select *from tblstockin as s inner join tblproduct as p on s.pid=p.id  join tblbrand as b on p.bid=b.brandid inner join tblclassification as c on p.cid=c.classificationid 
+    inner join tblformulation as f on p.fid = f.formulationid inner join tblgeneric as g on p.gid =g.genericid inner join tbltype as t on p.tid =t.typeid", cn)
+        dr = cm.ExecuteReader
+        While dr.Read
+            i += 1
+            DataGridView1.Rows.Add(i, dr.Item("id").ToString, dr.Item("barcode").ToString, dr.Item("brand").ToString, dr.Item("classification").ToString, dr.Item("formulation").ToString,
+           dr.Item("generic").ToString, dr.Item("type").ToString, dr.Item("reorder").ToString,
+                                   dr.Item("price").ToString, dr.Item("qty").ToString, "EDIT", "DEL")
+
+        End While
+        dr.Close()
+        cn.Close()
+
+    End Sub
+
 End Class

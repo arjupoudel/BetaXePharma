@@ -11,6 +11,12 @@ Module Module1
         With cn
             .ConnectionString = "server=localhost;user id =root;password=Codered368;database=xepharma"
 
+            '.ConnectionString = "host=162.241.253.189;user id =xenfotec_aswin;password=aswin123;database=xenfotec_xepharma"
+            '            .ConnectionString = "Host name = 162.241.253.189;
+            'Database= xenfotec_xepharma;
+            'user id = xenfotec_aswin;
+            'password = aswin123;
+            'Port = 3306"
         End With
     End Sub
 
