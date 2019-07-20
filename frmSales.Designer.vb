@@ -32,27 +32,27 @@ Partial Class frmSales
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbofilter = New System.Windows.Forms.ComboBox()
         Me.txtSearch = New MetroFramework.Controls.MetroTextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -65,22 +65,25 @@ Partial Class frmSales
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.lblInvoice = New System.Windows.Forms.Label()
+        Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        Me.Panel8.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel9.SuspendLayout()
-        Me.Panel10.SuspendLayout()
         Me.Panel11.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.Panel10.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel9.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        Me.Panel7.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel1.Controls.Add(Me.lblInvoice)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -181,6 +184,26 @@ Partial Class frmSales
         Me.Panel3.Size = New System.Drawing.Size(191, 49)
         Me.Panel3.TabIndex = 6
         '
+        'Panel11
+        '
+        Me.Panel11.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel11.Controls.Add(Me.Label11)
+        Me.Panel11.Location = New System.Drawing.Point(93, 0)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(98, 49)
+        Me.Panel11.TabIndex = 9
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(35, 9)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(58, 25)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "0.00"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -202,6 +225,26 @@ Partial Class frmSales
         Me.Panel4.Size = New System.Drawing.Size(191, 49)
         Me.Panel4.TabIndex = 7
         '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel10.Controls.Add(Me.Label10)
+        Me.Panel10.Location = New System.Drawing.Point(93, 0)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(98, 49)
+        Me.Panel10.TabIndex = 9
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(35, 9)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(58, 25)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "0.00"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -222,6 +265,26 @@ Partial Class frmSales
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(191, 49)
         Me.Panel5.TabIndex = 7
+        '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel9.Controls.Add(Me.Label9)
+        Me.Panel9.Location = New System.Drawing.Point(93, 0)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(98, 49)
+        Me.Panel9.TabIndex = 9
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(35, 9)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(58, 25)
+        Me.Label9.TabIndex = 0
+        Me.Label9.Text = "0.00"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label4
         '
@@ -255,6 +318,26 @@ Partial Class frmSales
         Me.Label5.Text = "Total Due"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel8.Controls.Add(Me.Label8)
+        Me.Panel8.Location = New System.Drawing.Point(93, 0)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(98, 49)
+        Me.Panel8.TabIndex = 8
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(35, 9)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(58, 25)
+        Me.Label8.TabIndex = 0
+        Me.Label8.Text = "0.00"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.SystemColors.ScrollBar
@@ -287,35 +370,16 @@ Partial Class frmSales
         Me.Label6.Text = "00:00:00"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Panel8
+        'cbofilter
         '
-        Me.Panel8.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Panel8.Controls.Add(Me.Label8)
-        Me.Panel8.Location = New System.Drawing.Point(93, 0)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(98, 49)
-        Me.Panel8.TabIndex = 8
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(35, 9)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(58, 25)
-        Me.Label8.TabIndex = 0
-        Me.Label8.Text = "0.00"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Barcode", "Brand", "Generic"})
-        Me.ComboBox1.Location = New System.Drawing.Point(9, 105)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(240, 23)
-        Me.ComboBox1.TabIndex = 11
+        Me.cbofilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbofilter.Enabled = False
+        Me.cbofilter.FormattingEnabled = True
+        Me.cbofilter.Items.AddRange(New Object() {"Barcode", "Brand", "Generic"})
+        Me.cbofilter.Location = New System.Drawing.Point(9, 105)
+        Me.cbofilter.Name = "cbofilter"
+        Me.cbofilter.Size = New System.Drawing.Size(240, 23)
+        Me.cbofilter.TabIndex = 11
         '
         'txtSearch
         '
@@ -368,66 +432,6 @@ Partial Class frmSales
         Me.DataGridView1.Size = New System.Drawing.Size(786, 509)
         Me.DataGridView1.TabIndex = 22
         '
-        'Panel9
-        '
-        Me.Panel9.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Panel9.Controls.Add(Me.Label9)
-        Me.Panel9.Location = New System.Drawing.Point(93, 0)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(98, 49)
-        Me.Panel9.TabIndex = 9
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(35, 9)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(58, 25)
-        Me.Label9.TabIndex = 0
-        Me.Label9.Text = "0.00"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Panel10
-        '
-        Me.Panel10.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Panel10.Controls.Add(Me.Label10)
-        Me.Panel10.Location = New System.Drawing.Point(93, 0)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(98, 49)
-        Me.Panel10.TabIndex = 9
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(35, 9)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(58, 25)
-        Me.Label10.TabIndex = 0
-        Me.Label10.Text = "0.00"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Panel11
-        '
-        Me.Panel11.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Panel11.Controls.Add(Me.Label11)
-        Me.Panel11.Location = New System.Drawing.Point(93, 0)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(98, 49)
-        Me.Panel11.TabIndex = 9
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(35, 9)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(58, 25)
-        Me.Label11.TabIndex = 0
-        Me.Label11.Text = "0.00"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'Column1
         '
         Me.Column1.FillWeight = 50.0!
@@ -450,7 +454,6 @@ Partial Class frmSales
         Me.Column2.HeaderText = "ID"
         Me.Column2.Name = "Column2"
         Me.Column2.Visible = False
-        Me.Column2.Width = 44
         '
         'Column6
         '
@@ -522,6 +525,16 @@ Partial Class frmSales
         Me.Column5.Name = "Column5"
         Me.Column5.Width = 5
         '
+        'lblInvoice
+        '
+        Me.lblInvoice.AutoSize = True
+        Me.lblInvoice.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInvoice.Location = New System.Drawing.Point(6, 65)
+        Me.lblInvoice.Name = "lblInvoice"
+        Me.lblInvoice.Size = New System.Drawing.Size(62, 18)
+        Me.lblInvoice.TabIndex = 0
+        Me.lblInvoice.Text = "000000"
+        '
         'frmSales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -529,7 +542,7 @@ Partial Class frmSales
         Me.ClientSize = New System.Drawing.Size(1000, 650)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.txtSearch)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbofilter)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel5)
@@ -546,27 +559,29 @@ Partial Class frmSales
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmSales"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
-        Me.Panel8.ResumeLayout(False)
-        Me.Panel8.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel9.ResumeLayout(False)
-        Me.Panel9.PerformLayout()
-        Me.Panel10.ResumeLayout(False)
-        Me.Panel10.PerformLayout()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel10.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        Me.Panel9.ResumeLayout(False)
+        Me.Panel9.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -592,7 +607,7 @@ Partial Class frmSales
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Label8 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbofilter As ComboBox
     Friend WithEvents txtSearch As MetroFramework.Controls.MetroTextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Panel11 As Panel
@@ -613,4 +628,5 @@ Partial Class frmSales
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewImageColumn
+    Friend WithEvents lblInvoice As Label
 End Class
