@@ -31,3 +31,4 @@ C:\Users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\b
 C:\Users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\bin\Debug\MetroFramework.dll
 C:\Users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\aswin\Documents\Visual Studio 2015\Projects\BetaXePharma\BetaXePharma\obj\Debug\BetaXePharma.frmSales.resources
+C:\Users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\obj\Debug\BetaXePharma.frmQty.resources

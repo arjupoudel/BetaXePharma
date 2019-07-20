@@ -5,6 +5,7 @@ Module Module1
     Public cn As New MySqlConnection
     Public cm As New MySqlCommand
     Public dr As MySqlDataReader
+    Public strUser As String = "Aswin"
 
     Sub connection()
         cn = New MySqlConnection
