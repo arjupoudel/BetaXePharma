@@ -66,7 +66,7 @@ Partial Class frmSales
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.colDel = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -88,7 +88,7 @@ Partial Class frmSales
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1089, 92)
+        Me.Panel1.Size = New System.Drawing.Size(1119, 92)
         Me.Panel1.TabIndex = 4
         '
         'lblInvoice
@@ -105,9 +105,9 @@ Partial Class frmSales
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Panel2.Controls.Add(Me.lblDispTotal)
-        Me.Panel2.Location = New System.Drawing.Point(893, 89)
+        Me.Panel2.Location = New System.Drawing.Point(893, 90)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(189, 65)
+        Me.Panel2.Size = New System.Drawing.Size(214, 62)
         Me.Panel2.TabIndex = 5
         '
         'lblDispTotal
@@ -127,7 +127,7 @@ Partial Class frmSales
         Me.btnNew.ForeColor = System.Drawing.Color.Black
         Me.btnNew.Location = New System.Drawing.Point(893, 152)
         Me.btnNew.Name = "btnNew"
-        Me.btnNew.Size = New System.Drawing.Size(191, 47)
+        Me.btnNew.Size = New System.Drawing.Size(214, 47)
         Me.btnNew.TabIndex = 6
         Me.btnNew.Text = "New Transaction"
         Me.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -141,7 +141,7 @@ Partial Class frmSales
         Me.btnProduct.ForeColor = System.Drawing.Color.Black
         Me.btnProduct.Location = New System.Drawing.Point(893, 199)
         Me.btnProduct.Name = "btnProduct"
-        Me.btnProduct.Size = New System.Drawing.Size(191, 44)
+        Me.btnProduct.Size = New System.Drawing.Size(214, 44)
         Me.btnProduct.TabIndex = 7
         Me.btnProduct.Text = "Product Inquiry"
         Me.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -155,7 +155,7 @@ Partial Class frmSales
         Me.btnDiscount.ForeColor = System.Drawing.Color.Black
         Me.btnDiscount.Location = New System.Drawing.Point(893, 236)
         Me.btnDiscount.Name = "btnDiscount"
-        Me.btnDiscount.Size = New System.Drawing.Size(191, 47)
+        Me.btnDiscount.Size = New System.Drawing.Size(214, 47)
         Me.btnDiscount.TabIndex = 8
         Me.btnDiscount.Text = "Add Discount"
         Me.btnDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -169,7 +169,7 @@ Partial Class frmSales
         Me.btnSettle.ForeColor = System.Drawing.Color.Black
         Me.btnSettle.Location = New System.Drawing.Point(893, 274)
         Me.btnSettle.Name = "btnSettle"
-        Me.btnSettle.Size = New System.Drawing.Size(191, 41)
+        Me.btnSettle.Size = New System.Drawing.Size(214, 41)
         Me.btnSettle.TabIndex = 9
         Me.btnSettle.Text = "Settle"
         Me.btnSettle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -183,7 +183,7 @@ Partial Class frmSales
         Me.btnDailySales.ForeColor = System.Drawing.Color.Black
         Me.btnDailySales.Location = New System.Drawing.Point(893, 311)
         Me.btnDailySales.Name = "btnDailySales"
-        Me.btnDailySales.Size = New System.Drawing.Size(191, 47)
+        Me.btnDailySales.Size = New System.Drawing.Size(214, 47)
         Me.btnDailySales.TabIndex = 10
         Me.btnDailySales.Text = "Daily Sales"
         Me.btnDailySales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -196,7 +196,7 @@ Partial Class frmSales
         Me.Panel3.Controls.Add(Me.label55)
         Me.Panel3.Location = New System.Drawing.Point(893, 364)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(191, 49)
+        Me.Panel3.Size = New System.Drawing.Size(214, 49)
         Me.Panel3.TabIndex = 6
         '
         'Panel11
@@ -205,14 +205,14 @@ Partial Class frmSales
         Me.Panel11.Controls.Add(Me.lblSub)
         Me.Panel11.Location = New System.Drawing.Point(93, 0)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(98, 49)
+        Me.Panel11.Size = New System.Drawing.Size(118, 49)
         Me.Panel11.TabIndex = 9
         '
         'lblSub
         '
         Me.lblSub.AutoSize = True
         Me.lblSub.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSub.Location = New System.Drawing.Point(35, 9)
+        Me.lblSub.Location = New System.Drawing.Point(-4, 9)
         Me.lblSub.Name = "lblSub"
         Me.lblSub.Size = New System.Drawing.Size(58, 25)
         Me.lblSub.TabIndex = 0
@@ -237,7 +237,7 @@ Partial Class frmSales
         Me.Panel4.Controls.Add(Me.Label3)
         Me.Panel4.Location = New System.Drawing.Point(893, 414)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(191, 49)
+        Me.Panel4.Size = New System.Drawing.Size(214, 49)
         Me.Panel4.TabIndex = 7
         '
         'Panel10
@@ -246,14 +246,14 @@ Partial Class frmSales
         Me.Panel10.Controls.Add(Me.lblDiscount)
         Me.Panel10.Location = New System.Drawing.Point(93, 0)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(98, 49)
+        Me.Panel10.Size = New System.Drawing.Size(121, 49)
         Me.Panel10.TabIndex = 9
         '
         'lblDiscount
         '
         Me.lblDiscount.AutoSize = True
         Me.lblDiscount.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDiscount.Location = New System.Drawing.Point(35, 9)
+        Me.lblDiscount.Location = New System.Drawing.Point(-4, 7)
         Me.lblDiscount.Name = "lblDiscount"
         Me.lblDiscount.Size = New System.Drawing.Size(58, 25)
         Me.lblDiscount.TabIndex = 0
@@ -278,7 +278,7 @@ Partial Class frmSales
         Me.Panel5.Controls.Add(Me.Label4)
         Me.Panel5.Location = New System.Drawing.Point(893, 464)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(191, 49)
+        Me.Panel5.Size = New System.Drawing.Size(214, 49)
         Me.Panel5.TabIndex = 7
         '
         'Panel9
@@ -287,14 +287,14 @@ Partial Class frmSales
         Me.Panel9.Controls.Add(Me.lblVat)
         Me.Panel9.Location = New System.Drawing.Point(93, 0)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(98, 49)
+        Me.Panel9.Size = New System.Drawing.Size(121, 49)
         Me.Panel9.TabIndex = 9
         '
         'lblVat
         '
         Me.lblVat.AutoSize = True
         Me.lblVat.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblVat.Location = New System.Drawing.Point(35, 9)
+        Me.lblVat.Location = New System.Drawing.Point(-4, 7)
         Me.lblVat.Name = "lblVat"
         Me.lblVat.Size = New System.Drawing.Size(58, 25)
         Me.lblVat.TabIndex = 0
@@ -319,7 +319,7 @@ Partial Class frmSales
         Me.Panel6.Controls.Add(Me.Panel8)
         Me.Panel6.Location = New System.Drawing.Point(893, 515)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(191, 49)
+        Me.Panel6.Size = New System.Drawing.Size(214, 49)
         Me.Panel6.TabIndex = 7
         '
         'Label5
@@ -339,14 +339,14 @@ Partial Class frmSales
         Me.Panel8.Controls.Add(Me.lblDue)
         Me.Panel8.Location = New System.Drawing.Point(93, 0)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(98, 49)
+        Me.Panel8.Size = New System.Drawing.Size(118, 49)
         Me.Panel8.TabIndex = 8
         '
         'lblDue
         '
         Me.lblDue.AutoSize = True
         Me.lblDue.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDue.Location = New System.Drawing.Point(35, 9)
+        Me.lblDue.Location = New System.Drawing.Point(-4, 7)
         Me.lblDue.Name = "lblDue"
         Me.lblDue.Size = New System.Drawing.Size(58, 25)
         Me.lblDue.TabIndex = 0
@@ -360,7 +360,7 @@ Partial Class frmSales
         Me.Panel7.Controls.Add(Me.lblTime)
         Me.Panel7.Location = New System.Drawing.Point(893, 563)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(191, 89)
+        Me.Panel7.Size = New System.Drawing.Size(214, 89)
         Me.Panel7.TabIndex = 7
         '
         'lblDate
@@ -427,7 +427,7 @@ Partial Class frmSales
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column12, Me.Column6, Me.Column8, Me.Column10, Me.Column7, Me.Column9, Me.Column3, Me.Column4, Me.Column11, Me.Column5})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column12, Me.Column6, Me.Column8, Me.Column10, Me.Column7, Me.Column9, Me.Column3, Me.Column4, Me.Column11, Me.colDel})
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder
         Me.DataGridView1.Location = New System.Drawing.Point(9, 138)
         Me.DataGridView1.Name = "DataGridView1"
@@ -527,19 +527,19 @@ Partial Class frmSales
         Me.Column11.Name = "Column11"
         Me.Column11.Width = 69
         '
-        'Column5
+        'colDel
         '
-        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.Column5.HeaderText = ""
-        Me.Column5.Image = CType(resources.GetObject("Column5.Image"), System.Drawing.Image)
-        Me.Column5.Name = "Column5"
-        Me.Column5.Width = 5
+        Me.colDel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.colDel.HeaderText = ""
+        Me.colDel.Image = CType(resources.GetObject("colDel.Image"), System.Drawing.Image)
+        Me.colDel.Name = "colDel"
+        Me.colDel.Width = 5
         '
         'frmSales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1089, 672)
+        Me.ClientSize = New System.Drawing.Size(1119, 692)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.Panel6)
@@ -627,5 +627,5 @@ Partial Class frmSales
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewImageColumn
+    Friend WithEvents colDel As DataGridViewImageColumn
 End Class

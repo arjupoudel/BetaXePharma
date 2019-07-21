@@ -5,6 +5,7 @@
         With frmMaintenance
             .TopLevel = False
             Panel3.Controls.Add(frmMaintenance)
+            .txtVat.Text = GetVAT()
             .BringToFront()
             .Show()
 
@@ -17,10 +18,6 @@
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         connection()
-    End Sub
-
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
-
     End Sub
 
     Private Sub btnProduct_Click(sender As Object, e As EventArgs) Handles btnProduct.Click

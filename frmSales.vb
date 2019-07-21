@@ -103,10 +103,27 @@ Public Class frmSales
             dr.Close()
             cn.Close()
             lblDispTotal.Text = Format(_total, "#,##0.00")
+            lblSub.Text = lblDispTotal.Text
+            lblVat.Text = Format(CDbl(lblSub.Text) * GetVAT(), "#,###0.00")
+            lblDue.Text = Format(CDbl(lblSub.Text) - CDbl(lblVat.Text), "#,###0.00")
 
         Catch ex As Exception
             cn.Close()
             MsgBox(ex.Message, vbCritical)
         End Try
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        Dim colName As String = DataGridView1.Columns(e.ColumnIndex).Name
+        If colName = "colDel" Then
+            If MsgBox("Remove this item? Please Confirm.", vbYesNo + vbQuestion) = vbYes Then
+                cn.Open()
+                cm = New MySqlCommand("delete from tblcart where id like '" & DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString & "'", cn)
+                cm.ExecuteNonQuery()
+                cn.Close()
+                MsgBox("Item has been sucessfully deleted", vbInformation)
+                LoadCart()
+            End If
+        End If
     End Sub
 End Class

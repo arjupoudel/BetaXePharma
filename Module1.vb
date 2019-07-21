@@ -21,6 +21,23 @@ Module Module1
         End With
     End Sub
 
+
+    Function GetVAT() As Double
+        cn.Open()
+        cm = New MySqlCommand("select * from tblvat", cn)
+        dr = cm.ExecuteReader
+        dr.Read()
+        If dr.HasRows Then
+            GetVAT = CDbl(dr.Item("vat").ToString)
+        Else
+            GetVAT = 0.00
+        End If
+        dr.Close()
+        cn.Close()
+        Return GetVAT
+
+    End Function
+
     Public Function IS_EMPTY(ByVal sText As Object) As Boolean
         On Error Resume Next
         If sText.Text = "" Then
