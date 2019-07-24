@@ -57,6 +57,7 @@ Partial Class frmSales
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -427,7 +428,7 @@ Partial Class frmSales
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column12, Me.Column6, Me.Column8, Me.Column10, Me.Column7, Me.Column9, Me.Column3, Me.Column4, Me.Column11, Me.colDel})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column5, Me.Column12, Me.Column6, Me.Column8, Me.Column10, Me.Column7, Me.Column9, Me.Column3, Me.Column4, Me.Column11, Me.colDel})
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder
         Me.DataGridView1.Location = New System.Drawing.Point(9, 138)
         Me.DataGridView1.Name = "DataGridView1"
@@ -457,6 +458,12 @@ Partial Class frmSales
         Me.Column2.Name = "Column2"
         Me.Column2.Visible = False
         Me.Column2.Width = 44
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "PID"
+        Me.Column5.Name = "Column5"
+        Me.Column5.Visible = False
         '
         'Column12
         '
@@ -618,6 +625,7 @@ Partial Class frmSales
     Friend WithEvents txtSearch As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn

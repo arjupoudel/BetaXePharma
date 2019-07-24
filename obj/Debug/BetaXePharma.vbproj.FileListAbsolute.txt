@@ -2,7 +2,6 @@ c:\users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\b
 c:\users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\bin\Debug\BetaXePharma.exe
 c:\users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\bin\Debug\BetaXePharma.pdb
 c:\users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\bin\Debug\BetaXePharma.xml
-c:\users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\obj\Debug\BetaXePharma.vbprojResolveAssemblyReference.cache
 c:\users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\obj\Debug\BetaXePharma.Resources.resources
 c:\users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\obj\Debug\BetaXePharma.vbproj.GenerateResource.Cache
 c:\users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\obj\Debug\BetaXePharma.exe
@@ -32,3 +31,5 @@ C:\Users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\b
 C:\Users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\aswin\Documents\Visual Studio 2015\Projects\BetaXePharma\BetaXePharma\obj\Debug\BetaXePharma.frmSales.resources
 C:\Users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\obj\Debug\BetaXePharma.frmQty.resources
+C:\Users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\obj\Debug\BetaXePharma.frmSettle.resources
+C:\Users\aswin\documents\visual studio 2015\Projects\BetaXePharma\BetaXePharma\obj\Debug\BetaXePharma.vbprojResolveAssemblyReference.cache

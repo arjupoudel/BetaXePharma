@@ -1,15 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class frmQty
     Private Sub frmQty_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-
-        'If (e.KeyCode = Keys.Escape) Then
-        '    With frmSales
-        '        .txtSearch.Focus()
-        '        .txtSearch.SelectionStart = 0
-        '        .txtSearch.SelectionLength = .txtSearch.Text.Length
-        '    End With
-        '    Me.Dispose()
-        'End If
         Select Case e.KeyCode
             Case Keys.Escape   'when pressing esc key
                 With frmSales
@@ -28,13 +19,43 @@ Public Class frmQty
         txtQty.SelectionLength = txtQty.Text.Length
     End Sub
 
+    Function GetStockAvailable(ByVal sql As String) As Integer
+        cn.Open()
+        cm = New MySqlCommand(sql, cn)
+        dr = cm.ExecuteReader
+        dr.Read()
+        If dr.HasRows Then
+            GetStockAvailable = CInt(dr.Item("qty").ToString)
+        Else
+            GetStockAvailable = 0
+        End If
+        dr.Close()
+        cn.Close()
+        Return GetStockAvailable
+    End Function
     Sub AddToCart()
         Try
 
             If txtQty.Text = String.Empty Or txtQty.Text = "0" Then Return
             Dim sdate As String = Now.ToString("yyyy-MM-dd")
+
             cn.Open()
-            cm = New MySqlCommand("Insert into tblcart(invoice,pid,price,qty,sdate,user)VALUES(@invoice,@pid,@price,@qty,@sdate,@user)", cn)
+
+            cm = New MySqlCommand("select * from tblproduct where id like '" & lblPID.Text & "'  and qty >= '" & CInt(txtQty.Text) & "'", cn)
+            dr = cm.ExecuteReader
+            dr.Read()
+            If dr.HasRows Then
+                dr.Close()
+                cn.Close()
+            Else
+                dr.Close()
+                cn.Close()
+                MsgBox("Unable to proceed.Remaining stock " & GetStockAvailable("select * from tblproduct where id Like '" & lblPID.Text & "'") & ".", vbCritical)
+
+                Return
+            End If
+            cn.Open()
+            cm = New MySqlCommand("Insert into tblcart(invoice, pid, price, qty, sdate, user)VALUES(@invoice,@pid,@price,@qty,@sdate,@user)", cn)
             With frmSales
                 cm.Parameters.AddWithValue("@invoice", .lblInvoice.Text)
                 cm.Parameters.AddWithValue("@pid", lblPID.Text)
@@ -46,7 +67,7 @@ Public Class frmQty
                 cn.Close()
 
                 cn.Open()
-                cm = New MySqlCommand("update tblcart set total = price * qty where invoice like '" & .lblInvoice.Text & "'", cn)
+                cm = New MySqlCommand("update tblcart Set total = price * qty where invoice Like '" & .lblInvoice.Text & "'", cn)
                 cm.ExecuteNonQuery()
                 cn.Close()
 
@@ -79,5 +100,7 @@ Public Class frmQty
         End Select
     End Sub
 
+    Private Sub txtQty_TextChanged(sender As Object, e As EventArgs) Handles txtQty.TextChanged
 
+    End Sub
 End Class
