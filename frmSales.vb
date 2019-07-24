@@ -106,10 +106,10 @@ Public Class frmSales
             lblDispTotal.Text = Format(_total, "#,##0.00")
             lblSub.Text = lblDispTotal.Text
             lblVat.Text = Format(CDbl(lblSub.Text) * GetVAT(), "#,###0.00")
-            lblDue.Text = Format(CDbl(lblSub.Text) - CDbl(lblVat.Text), "#,###0.00")
+            lblDue.Text = Format(CDbl(lblSub.Text) + CDbl(lblVat.Text), "#,###0.00")
             lblDispTotal.Text = lblDue.Text
             If DataGridView1.RowCount > 0 Then btnSettle.Enabled = True Else btnSettle.Enabled = False
- _
+
 
         Catch ex As Exception
             cn.Close()
